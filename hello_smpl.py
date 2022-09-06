@@ -40,7 +40,7 @@ the hello world script now by typing the following:
 
 '''
 
-from smpl_webuser.serialization import load_model
+from serialization import load_model
 import numpy as np
 
 ## Load SMPL model (here we load the female model)

@@ -25,6 +25,7 @@ __all__ = ['load_model', 'save_model']
 import numpy as np
 import pickle
 import chumpy as ch
+import pandas as pd
 from chumpy.ch import MatVecMult
 from posemapper import posemap
 from verts import verts_core
@@ -77,7 +78,7 @@ def backwards_compatibility_replacements(dd):
 def ready_arguments(fname_or_dict):
 
     if not isinstance(fname_or_dict, dict):
-        dd = pickle.load(open(fname_or_dict))
+        dd = pd.read_pickle(r'smpl/models/basicmodel_neutral_lbs_10_207_0_v1.1.0.pkl')
     else:
         dd = fname_or_dict
         

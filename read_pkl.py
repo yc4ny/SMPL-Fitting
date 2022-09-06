@@ -1,3 +1,5 @@
+# Example file verifying the structure of 3DPW's pkl file 
+
 import pandas as pd
 import numpy as np 
 import cv2 
@@ -22,9 +24,6 @@ def reproject(projectionMatrix, point_3d):
 
     return points_2d[:,:2]
     
-
-
-
 obj = pd.read_pickle(r'3DPW/sequenceFiles/sequenceFiles/train/courtyard_arguing_00.pkl')
 print(obj)
 

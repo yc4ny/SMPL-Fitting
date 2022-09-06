@@ -23,7 +23,7 @@ Modules included:
 __all__ = ['load_model', 'save_model']
 
 import numpy as np
-import cPickle as pickle
+import pickle
 import chumpy as ch
 from chumpy.ch import MatVecMult
 from posemapper import posemap

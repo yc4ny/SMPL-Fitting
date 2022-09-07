@@ -38,7 +38,9 @@ point_2d = reproject(projectionMatrix,joint)
 
 img = cv2.imread('3DPW/imageFiles/imageFiles/courtyard_arguing_00/image_00000.jpg')
 
-for i in range(24):
-    joint_img = cv2.circle(img, (int(point_2d[i][0]), int(point_2d[i][1])), 10, (0,0,255),-1)
+for i in range(point_2d.shape[0]):
+    joint_img = cv2.circle(img, (int(point_2d[i][0]), int(point_2d[i][1])), 5, (0,0,255),-1)
+    joint_img = cv2.putText(joint_img, str(i), (int(point_2d[i][0]), int(point_2d[i][1])),cv2.FONT_HERSHEY_SIMPLEX,fontScale = 1, color = (255,0,0), thickness = 2)
 
-cv2.imwrite('test.jpg', joint_img)
+
+cv2.imwrite('3dpw_joint.jpg', joint_img)

@@ -42,32 +42,45 @@ if __name__ == '__main__':
     # model.r: Vertices
     # model.f: Faces
     # model.J: 3D Joints
+
+    # Load SMPL model, pose and beta parameters random initialization
     model = load_model( 'smpl/models/basicmodel_neutral_lbs_10_207_0_v1.1.0.pkl' )
     model.pose[:] = obj['poses'][0][0]
     model.betas[:] = obj['betas'][0][0]
+    # Vertices and Joints from SMPL parameters 
     pred_output = model()
     model.J = model.J_regressor.dot(pred_output)
     
+    # Reproject 3d GT joint and 3d SMPL joints using the camera parameters onto the image plane
     gt_joint = reproject(projectionMatrix, gt_joint)
     smpl_J_2d = reproject(projectionMatrix,model.J)
+
+    # Find SMPL scale and translation constant
     scale = smplScale(gt_joint, smpl_J_2d)
     smpl_J_2d = smpl_J_2d * scale
+    trans_scale = [(smpl_J_2d[0][0] - gt_joint[0][0]),(smpl_J_2d[0][1] - gt_joint[0][1])] # Move to pelvis location 
 
-    trans_scale = [(smpl_J_2d[0][0] - gt_joint[0][0]),(smpl_J_2d[0][1] - gt_joint[0][1])]
+    # Update SMPL joint locations to the image plane
     for i in range(smpl_J_2d.shape[0]):
         smpl_J_2d[i][0] -= trans_scale[0] 
         smpl_J_2d[i][1] -= trans_scale[1]
+    
+    # Find updated vertices using the updated SMPL joint location 
+    pred_output = model()
+    pred_output = reproject(projectionMatrix, pred_output)
+    # Apply scale and translation to the vertices
+    pred_output = pred_output * scale
+    for i in range(pred_output.shape[0]):
+        pred_output[i][0] -= trans_scale[0] 
+        pred_output[i][1] -= trans_scale[1]
 
+    # Print results
     img = cv2.imread('3DPW/imageFiles/imageFiles/courtyard_arguing_00/image_00000.jpg')
-
+    for i in range(pred_output.shape[0]):
+        joint_img = cv2.circle(img, (int( pred_output[i][0]), int(pred_output[i][1])), 1, (0,255,0),-1)
     for i in range(smpl_J_2d.shape[0]):
         joint_img = cv2.circle(img, (int(smpl_J_2d[i][0]), int( smpl_J_2d[i][1])), 5, (0,0,255),-1)
         joint_img = cv2.putText(img, str(i), (int( smpl_J_2d[i][0]), int( smpl_J_2d[i][1])),cv2.FONT_HERSHEY_SIMPLEX,fontScale = 1, color = (255,0,0), thickness = 2)
-    
-    # for i in range(pred_output.shape[0]):
-    #     joint_img = cv2.circle(img, (int( pred_output[i][0]), int(pred_output[i][1])), 5, (0,0,255),-1)
-    #     joint_img = cv2.putText(img, str(i), (int( pred_output[i][0]), int(pred_output[i][1])),cv2.FONT_HERSHEY_SIMPLEX,fontScale = 1, color = (255,0,0), thickness = 2)
-
-    cv2.imwrite('smpl_joint.jpg', joint_img)
+    cv2.imwrite('smpl_joint_vertices.jpg', joint_img)
 
 

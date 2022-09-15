@@ -1,25 +1,3 @@
-'''
-Copyright 2015 Matthew Loper, Naureen Mahmood and the Max Planck Gesellschaft.  All rights reserved.
-This software is provided for research purposes only.
-By using this software you agree to the terms of the SMPL Model license here http://smpl.is.tue.mpg.de/license
-
-More information about SMPL is available here http://smpl.is.tue.mpg.
-For comments or questions, please email us at: smpl@tuebingen.mpg.de
-
-
-About this file:
-================
-This file defines linear blend skinning for the SMPL loader which 
-defines the effect of bones and blendshapes on the vertices of the template mesh.
-
-Modules included:
-- global_rigid_transformation: 
-  computes global rotation & translation of the model
-- verts_core: [overloaded function inherited from verts.verts_core]
-  computes the blending of joint-influences for each vertex based on type of skinning
-
-'''
-
 from posemapper import posemap
 import chumpy
 import numpy as np

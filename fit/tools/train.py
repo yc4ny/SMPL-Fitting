@@ -3,7 +3,6 @@ import torch.nn.functional as F
 import torch.optim as optim
 import sys
 import os
-
 from tqdm import tqdm
 sys.path.append(os.getcwd())
 
@@ -52,7 +51,6 @@ def train(smpl_layer, target,
     scale = params["scale"]
 
     for epoch in tqdm(range(cfg.TRAIN.MAX_EPOCH)):
-    # for epoch in range(cfg.TRAIN.MAX_EPOCH):
         verts, Jtr = smpl_layer(pose_params, th_betas=shape_params)
         loss = F.smooth_l1_loss(Jtr.index_select(1, index["smpl_index"]) * 100,
                                 target.index_select(1, index["dataset_index"]) * 100 * scale)
@@ -64,8 +62,6 @@ def train(smpl_layer, target,
         if meters.update_res:
             res = [pose_params, shape_params, verts, Jtr]
         if epoch % cfg.TRAIN.WRITE == 0:
-            # logger.info("Epoch {}, lossPerBatch={:.6f}, scale={:.4f}".format(
-            #         epoch, float(loss),float(scale)))
             writer.add_scalar('loss', float(loss), epoch)
             writer.add_scalar('learning_rate', float(
                 optimizer.state_dict()['param_groups'][0]['lr']), epoch)

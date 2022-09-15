@@ -79,8 +79,6 @@ def get_logger(cur_path):
 
 if __name__ == "__main__":
     args = parse_args()
-    args.dataset_name = '3DPW'
-    args.dataset_path = '3DPW/sequenceFiles/sequenceFiles/train/npy'
     cur_path = os.path.join(os.getcwd(), 'exp', args.exp)
     assert not os.path.exists(cur_path), 'Duplicate exp name'
     os.mkdir(cur_path)
@@ -116,7 +114,6 @@ if __name__ == "__main__":
             logger.info("avg_loss:{:.4f}".format(meters.avg))
 
             save_params(res, file, logger, args.dataset_name)
-            # save_pic(res,smpl_layer,file,logger,args.dataset_name,target)
             
             torch.cuda.empty_cache()
     logger.info("Fitting finished! Average loss:     {:.9f}".format(meters.avg))

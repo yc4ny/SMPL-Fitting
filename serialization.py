@@ -78,7 +78,7 @@ def backwards_compatibility_replacements(dd):
 def ready_arguments(fname_or_dict):
 
     if not isinstance(fname_or_dict, dict):
-        dd = pd.read_pickle(r'smpl/models/basicmodel_neutral_lbs_10_207_0_v1.1.0.pkl')
+        dd = pd.read_pickle(r'smpl/models/basicmodel_m_lbs_10_207_0_v1.0.0.pkl')
     else:
         dd = fname_or_dict
         

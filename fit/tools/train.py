@@ -43,6 +43,7 @@ def init(smpl_layer, target, device, cfg):
 def train(smpl_layer, target,
           logger, writer, device,
           args, cfg, meters):
+          
     res = []
     smpl_layer, params, target, optimizer, index = \
         init(smpl_layer, target, device, cfg)

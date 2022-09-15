@@ -1,22 +1,3 @@
-'''
-Copyright 2015 Matthew Loper, Naureen Mahmood and the Max Planck Gesellschaft.  All rights reserved.
-This software is provided for research purposes only.
-By using this software you agree to the terms of the SMPL Model license here http://smpl.is.tue.mpg.de/license
-
-More information about SMPL is available here http://smpl.is.tue.mpg.
-For comments or questions, please email us at: smpl@tuebingen.mpg.de
-
-
-About this file:
-================
-This module defines the mapping of joint-angles to pose-blendshapes. 
-
-Modules included:
-- posemap:
-  computes the joint-to-pose blend shape mapping given a mapping type as input
-
-'''
-
 import chumpy as ch
 import numpy as np
 import cv2

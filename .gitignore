@@ -3,3 +3,4 @@ smpl/models
 output_img
 output_vid
 exp
+fit/output

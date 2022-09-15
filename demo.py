@@ -39,10 +39,10 @@ if __name__ == '__main__':
     model = load_model( 'smpl/models/basicmodel_m_lbs_10_207_0_v1.0.0.pkl')
 
     pose_params = np.array(smpl_params['pose_params'])
-    pose_params = pose_params.reshape(765,24,3)
+    pose_params = pose_params.reshape(pose_params.shape[0],24,3)
     shape_params = np.array(smpl_params['shape_params'])
 
-    for j in tqdm(range(765)):
+    for j in tqdm(range(pose_params.shape[0])):
         gt_joint = obj['jointPositions'][0][j]
         gt_joint = np.reshape(gt_joint, (24,3))
         pose = np.reshape(pose_params[j],(72,))

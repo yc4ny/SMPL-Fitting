@@ -5,3 +5,4 @@ output_vid
 exp/
 fit/output
 __pycache__
+PanopticHome

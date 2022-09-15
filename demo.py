@@ -2,6 +2,8 @@ import numpy as np
 from serialization import load_model
 import pandas as pd
 import cv2 
+from tqdm import tqdm
+import time
 
 def homogeneous_2d(point_2d): 
     point_2d[0] = point_2d[0]/point_2d[2]
@@ -32,7 +34,7 @@ def smplScale(gt_joint, smpl_J_2d):
 if __name__ == '__main__': 
 
     obj = pd.read_pickle(r'3DPW/sequenceFiles/sequenceFiles/train/courtyard_arguing_00.pkl')
-    smpl_params = pd.read_pickle(r'courtyard_arguing_00_params.pkl')
+    smpl_params = pd.read_pickle(r'fit/output/3DPW/courtyard_arguing_00_params.pkl')
     intrinsic = obj['cam_intrinsics']
     model = load_model( 'smpl/models/basicmodel_m_lbs_10_207_0_v1.0.0.pkl')
 
@@ -40,7 +42,7 @@ if __name__ == '__main__':
     pose_params = pose_params.reshape(765,24,3)
     shape_params = np.array(smpl_params['shape_params'])
 
-    for j in range(765):
+    for j in tqdm(range(765)):
         gt_joint = obj['jointPositions'][0][j]
         gt_joint = np.reshape(gt_joint, (24,3))
         pose = np.reshape(pose_params[j],(72,))

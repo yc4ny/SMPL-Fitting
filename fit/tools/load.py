@@ -22,4 +22,6 @@ def load(name, path):
         return np.load(path, allow_pickle=True)
     elif name == "3DPW":
         return np.load(path, allow_pickle=True)
+    elif name == "demo":
+        return np.load(path, allow_pickle =True)
         

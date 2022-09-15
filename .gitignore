@@ -2,6 +2,6 @@ smpl/models
 3DPW 
 output_img
 output_vid
-exp
+exp/
 fit/output
 __pycache__

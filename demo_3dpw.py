@@ -33,8 +33,8 @@ def smplScale(gt_joint, smpl_J_2d):
 
 if __name__ == '__main__': 
 
-    obj = pd.read_pickle(r'3DPW/sequenceFiles/sequenceFiles/train/courtyard_arguing_00.pkl')
-    smpl_params = pd.read_pickle(r'fit/output/3DPW/courtyard_arguing_00_params.pkl')
+    obj = pd.read_pickle(r'3DPW/sequenceFiles/sequenceFiles/train/courtyard_backpack_00.pkl')
+    smpl_params = pd.read_pickle(r'fit/output/3DPW/courtyard_backpack_00_params.pkl')
     intrinsic = obj['cam_intrinsics']
     model = load_model( 'smpl/models/basicmodel_m_lbs_10_207_0_v1.0.0.pkl')
 
@@ -59,7 +59,7 @@ if __name__ == '__main__':
         gt_joint = reproject(projectionMatrix, gt_joint)
         smpl_J_2d = reproject(projectionMatrix,model.J)
         # Find SMPL scale and translation constant
-        # scale = smplScale(gt_joint, smpl_J_2d)
+        # scale =  
         # smpl_J_2d = smpl_J_2d * scale
         trans_scale = [(smpl_J_2d[0][0] - gt_joint[0][0]),(smpl_J_2d[0][1] - gt_joint[0][1])] # Move to pelvis location 
         # Update SMPL joint locations to the image plane
@@ -75,7 +75,7 @@ if __name__ == '__main__':
             pred_output[i][0] -= trans_scale[0] 
             pred_output[i][1] -= trans_scale[1]
         # Print results
-        img = cv2.imread('3DPW/imageFiles/imageFiles/courtyard_arguing_00/image_' + '{:05d}'.format(j)+'.jpg')
+        img = cv2.imread('3DPW/imageFiles/imageFiles/courtyard_backpack_00/image_' + '{:05d}'.format(j)+'.jpg')
 
         for i in range(pred_output.shape[0]):
             joint_img = cv2.circle(img, (int( pred_output[i][0]), int(pred_output[i][1])), 1, (0,255,0),-1)

@@ -3,10 +3,10 @@
         "GENDER": "neutral"
     },
     "TRAIN": {
-        "LEARNING_RATE": 2e-2,
-        "MAX_EPOCH": 4000,
+        "LEARNING_RATE": 1e-2,
+        "MAX_EPOCH": 2000,
         "WRITE": 1,
-        "OPTIMIZE_SCALE":1,
+        "OPTIMIZE_SCALE":0,
         "OPTIMIZE_SHAPE":1
     },
     "USE_GPU": 1,

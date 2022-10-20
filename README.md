@@ -1,4 +1,4 @@
-# Optimizing SMPL's "θ,	β, scale" parameters
+# Optimizing SMPL parameters: θ,β,scale
 This is my implementation of optimizing SMPL parameters from ground truth 3D joints <br/> <br/>
 <p align= "center">
 <img src="img/fitting_initial.jpg" alt= "Initial" width="290" height="500" />

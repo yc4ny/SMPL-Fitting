@@ -2,7 +2,7 @@
 This is my implementation of optimizing SMPL parameters from ground truth 3D joints <br/> 
 
 <img src="img/smpl_joint_vertices.jpg" 
-     width="250" 
+     width="290" 
      height="500" /><br/>
 
 > - Optimized Joint Locations are marked in red circles. <br/>

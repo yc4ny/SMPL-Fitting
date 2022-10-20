@@ -1,7 +1,7 @@
 # Optimizing SMPL parameters to 3D Joints -<br/> Optimizing θ,	β, scale parameters
 This is my implementation of optimizing SMPL parameters from ground truth 3D joints <br/> <br/>
 <img src="img/fitting_initial.jpg" width="290" height="500" /> 
-<img src="img/smpl_joint_vertices.jpg" width="290" height="500" style="float:left"/> 
+<img src="img/smpl_joint_vertices.jpg" width="290" height="500" style="float:center"/> 
 
 > - Optimized Joint Locations are marked in red circles. <br/>
 > - SMPL Joint Numbers are in blue.<br/> 

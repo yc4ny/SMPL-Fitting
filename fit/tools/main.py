@@ -98,7 +98,7 @@ if __name__ == "__main__":
     smpl_layer = SMPL_Layer(
         center_idx=0,
         gender=cfg.MODEL.GENDER,
-        model_root='smplpytorch/models')
+        model_root='smpl/models')
     
     meters=Meters()
     file_num = 0

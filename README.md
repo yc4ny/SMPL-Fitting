@@ -1,4 +1,4 @@
-# Obtaining SMPL θ,β parameters
+# Optimizing SMPL parameters
 This is my implementation of optimizing SMPL parameters from ground truth 3D joints.<br/>
 For testing, I've used the <a href="https://virtualhumans.mpi-inf.mpg.de/3DPW/">3D Poses in the Wild</a> dataset for obtaining ground truth 3D joints.<br/>
 <p align= "center">

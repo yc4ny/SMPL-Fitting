@@ -35,7 +35,8 @@ Download [SMPL Female and Male](https://smpl.is.tue.mpg.de/) and [SMPL Netural](
     	└-- SMPL_FEMALE.pkl
 		└-- SMPL_MALE.pkl
 		└-- SMPL_NEUTRAL.pkl
-
+   ```
+        
 <p align="center">
   <img width="600" src="git_images/checkerboard_calib.png"> <br/>
 Detected checkerboard points, reprojected points

@@ -37,7 +37,7 @@ Download [SMPL Female and Male](https://smpl.is.tue.mpg.de/) and [SMPL Netural](
 ### Install the smplpytorch package
 You need this package to obtain the `SMPL_Layer` used for optimization.
 ```
-pip install -r requirments.txt
+pip install smplpytorch
 ```
 
 ### OpenPose

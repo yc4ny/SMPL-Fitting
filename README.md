@@ -27,15 +27,14 @@ pip install -r requirements.txt
 You must also have _ffmpeg_ installed on your system to save visualizations. <br/><br/>
 I have used 5 _GOPRO10_ cameras for this task. If you are using more or less cameras, you need to modify the DLT, optimization code. 
 
-### MATLAB Stereo Camera Calibrator Application (Optional)
-> - This repo uses MATLAB for camera calibration and checkerboard point detection. You may use other methods for calibration (eg. OpenCV, COLMAP, Visual SFM).
-> - In MATLAB, install the ```Computer Vision Toolbox``` and you will find the ```Camera Calibrator```, and the ```Stereo Camera Calibrator```.
-> - The ```Stereo Camera Calibrator``` is capable of finding both the extrinsics and intrinsics of the camera. However, I found that the Camera Calibrator gives more stable results for finding the camera intrinsic parameters. I highly recommend you to use both tools for calibration. 
-
-Finding the Intrinsics
-
-> - It is recommended to use more than 20 checkerboard images using the ```Camera Calibrator``` app. 
-> - The app lets you remove the outliers, if a reprojection of a image is too big (larger than 5), remove the outliers and re-run the calibration process. 
+### Download SMPL models
+Download [SMPL Female and Male](https://smpl.is.tue.mpg.de/) and [SMPL Netural](https://smplify.is.tue.mpg.de/), and rename the files and extract them to `<current directory>/smpl_models/smpl/`, eventually, the `<current directory>/smpl_models` folder should have the following structure:
+   ```
+   smpl_models
+    └-- smpl
+    	└-- SMPL_FEMALE.pkl
+		└-- SMPL_MALE.pkl
+		└-- SMPL_NEUTRAL.pkl
 
 <p align="center">
   <img width="600" src="git_images/checkerboard_calib.png"> <br/>

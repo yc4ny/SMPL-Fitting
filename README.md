@@ -5,8 +5,9 @@ I've used the <a href="https://virtualhumans.mpi-inf.mpg.de/3DPW/">3D Poses in t
 <img src="img/fitting_initial.jpg" width="290" height="500" />
 <img src="img/smpl_joint_vertices.jpg" width="290" height="500" style="float:center"/> 
 </p>
-> - Optimized Joint Locations are marked in red circles. <br/>
-> - SMPL Joint Numbers are in blue.<br/> 
+> - <strong>Left: Before Optimization, Right: After Optimization.</strong> <br/>
+> - Optimized Joint Locations are marked in red points. <br/>
+> - SMPL Joint Numbers are in blue text.<br/> 
 > - Green mesh is consisted of 6930 vertices obtained from the SMPL model<br/> 
 <br/>
 

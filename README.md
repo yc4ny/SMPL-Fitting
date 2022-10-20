@@ -1,7 +1,10 @@
-# Optimizing SMPL parameters to 3D Joints -<br/> Optimizing θ,	β, s
+# Optimizing SMPL parameters to 3D Joints -<br/> Optimizing θ,	β, scale parameters
 This is my implementation of optimizing SMPL parameters from ground truth 3D joints <br/> 
 
-![Stereo Reconstruction Final Results](img/smpl_joint_vertices.jpg)<br/>
+<img src="img/smpl_joint_vertices.jpg" 
+     width="400" 
+     height="500" /><br/>
+
 > - Optimized Joint Locations are marked in red circles. <br/>
 > - SMPL Joint Numbers are in blue.<br/> 
 > - Green mesh is consisted of 6930 vertices obtained from the SMPL model<br/> 

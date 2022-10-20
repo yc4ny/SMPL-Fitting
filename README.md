@@ -1,4 +1,4 @@
-# Optimizing SMPL parameters: θ,β,scale
+# Obtaining SMPL θ,β parameters
 This is my implementation of optimizing SMPL parameters from ground truth 3D joints.<br/>
 I've used the <a href="https://virtualhumans.mpi-inf.mpg.de/3DPW/">3D Poses in the Wild</a> dataset for obtaining ground truth 3D joints.<br/>
 <p align= "center">
@@ -10,11 +10,6 @@ I've used the <a href="https://virtualhumans.mpi-inf.mpg.de/3DPW/">3D Poses in t
 > - SMPL Joint Numbers are in blue text.<br/> 
 > - Green mesh is consisted of 6930 vertices obtained from the SMPL model<br/> 
 <br/>
-
-![Stereo Reconstruction Final Results](git_images/openpose_result.png)<br/><br/> 
-> - Green joints indicate the 2D reprojection of the reconstructed 3D joints. <br/>
-> - Orange joints indicate the 2D joints found by openpose.<br/> 
-> - The "Frame Reprojection Error" indicates the average reprojection error (Euclidean distance) of points of the reconstructed 3D joints. <br/>
 
 ## Environment Setup
 > Note: This code was developed on Ubuntu 20.04/22.04 with Python 3.7. Later versions should work, but have not been tested.

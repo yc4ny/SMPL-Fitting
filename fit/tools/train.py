@@ -11,7 +11,7 @@ sys.path.append(os.getcwd())
 def init(smpl_layer, target, device, cfg):
     params = {}
     params["pose_params"] = torch.zeros(target.shape[0], 72)
-    params["shape_params"] = torch.zeros(target.shape[0], 10)
+    params["shape_params"] = torch.ones(target.shape[0], 10)
     params["scale"] = torch.ones([1])
 
     smpl_layer = smpl_layer.to(device)

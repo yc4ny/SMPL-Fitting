@@ -79,9 +79,6 @@ def get_logger(cur_path):
 
 if __name__ == "__main__":
     args = parse_args()
-    # args.dataset_name = '3DPW'
-    # args.dataset_path = '3DPW/sequenceFiles/sequenceFiles/train/npy'
-
     cur_path = os.path.join(os.getcwd(), 'exp', args.exp)
     assert not os.path.exists(cur_path), 'Duplicate exp name'
     os.mkdir(cur_path)

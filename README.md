@@ -42,8 +42,8 @@ pip install smplpytorch
 
 ### Optimization
 Before running optimization you must convert groundtruth 3d joints into the required format.<br/>
-If using 3DPW dataset, just change the directory of the sequence files of your choice in the `pkl_to_npy` file. <br/>
-After run:
+If using 3DPW dataset, just change the directory of the sequence files of your choice in the `pkl_to_npy` file. <br/><br/>
+Run:
 ```
 python pkl_to_npy.py
 ```

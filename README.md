@@ -6,7 +6,7 @@ For testing, I've used the <a href="https://virtualhumans.mpi-inf.mpg.de/3DPW/">
 <img src="img/smpl_joint_vertices.jpg" width="290" height="500" style="float:center"/> 
 </p>
 > - <strong>Left: Before Optimization, Right: After Optimization.</strong> <br/>
-> - Optimized Joint Locations are marked in <p style = "color:red;">red</p> points. <br/>
+> - Optimized Joint Locations are marked in <p style="color:blue">This is demo content.</p> red points. <br/>
 > - SMPL Joint Numbers are in blue text.<br/> 
 > - Green mesh is consisted of 6930 vertices obtained from the SMPL model<br/> 
 <br/>

@@ -35,11 +35,10 @@ Download [SMPL Female and Male](https://smpl.is.tue.mpg.de/) and [SMPL Netural](
 		└-- basicModel_neutral_lbs_10_207_0_v1.0.0.pkl
    ```
 ### Install the smplpytorch package
-> You need this package to obtain the `SMPL_Layer` used for optimization.
-
-    ```
-    pip install smplpytorch
-    ```
+You need this package to obtain the `SMPL_Layer` used for optimization.
+```
+pip install -r requirments.txt
+```
 
 ### OpenPose
 > - [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) is used to detect 2D joints from arbitrary RGB videos.<br/>

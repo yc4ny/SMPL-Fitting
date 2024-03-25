@@ -25,13 +25,13 @@ pip install -r requriements.txt
 ```
 
 ## Preprocessing Files
-
+You must preprocess the data
 
 ## Demo
+To perform fitting, you can run:
 ```bash
-python demo.py \
-    --img_folder example_data --out_folder demo_out \
-    --batch_size=48 --side_view --save_mesh --full_frame
+python fit.py \
+    --dataset_name {name of the data you wish to process} --dataset_dir {directory of the preprocessed .npy files}
 ```
 
 

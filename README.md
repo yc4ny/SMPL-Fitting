@@ -49,4 +49,4 @@ Parts of the code are taken or adapted from the following repos:
 - [SMPLPytorch](https://github.com/gulvarol/smplpytorch)
 - [MultiviewSMPLifyX](https://github.com/ZhengZerong/MultiviewSMPLifyX)
 - [Smplify-x](https://github.com/vchoutas/smplify-x)
-- [POSE2SMPL](https://github.com/Dou-Yiming/Pose_to_SMPL)
+- [Pose2SMPL](https://github.com/Dou-Yiming/Pose_to_SMPL)

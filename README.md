@@ -31,7 +31,7 @@ You must preprocess your data to match the input format.
 The code will take a **.npy** file as input containing an array of shape $(N \times J \times 3)$, where $N$ is the number of frames in the sequence, $J$ the number of joints in the 3D Keypoint data. For example, if there is a $(500 \times 24 \times 3)$ array given as input, in the data there are $24 \times 3D$ Joints per frame and $500$ frames in total. Put all the processed **.npy** files in a single folder, it will be used for the **--dataset_dir** flag in the demo. 
 
 #### 2. Create a configs.json file 
-There is a ```configs/3DPW.json```
+You need to have a configs.json file. There is ```configs/3DPW.json``` file that I have used for fitting the 3DPW dataset. Make a copy of the file, change the name ```NAME``` and ```PATH``` according to your data. Make sure to change the ```DATA_MAP``` for mapping index of the joints of the data you wish to fit with the original SMPL keypoints.
 
 
 ## Demo
@@ -43,5 +43,10 @@ python fit.py --dataset_name {name of the data} --dataset_dir {directory of the 
 
 
 ## Acknowledgements
+
 Parts of the code are taken or adapted from the following repos:
+
 - [SMPLPytorch](https://github.com/gulvarol/smplpytorch)
+- [MultiviewSMPLifyX](https://github.com/ZhengZerong/MultiviewSMPLifyX)
+- [Smplify-x](https://github.com/vchoutas/smplify-x)
+- [POSE2SMPL](https://github.com/Dou-Yiming/Pose_to_SMPL)

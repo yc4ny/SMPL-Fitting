@@ -30,7 +30,7 @@ You must preprocess the data
 ## Demo
 To perform fitting, you can run:
 ```bash
-python fit.py --dataset_name {name of the data you wish to process} --dataset_dir {directory of the preprocessed .npy files}
+python fit.py --dataset_name {name of the data} --dataset_dir {directory of the preprocessed .npy files}
 ```
 
 

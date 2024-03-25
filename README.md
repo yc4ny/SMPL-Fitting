@@ -7,21 +7,15 @@ Code repository for the paper:
 ## Installation
 First you need to clone the repo:
 ```
-git clone --recursive git@github.com:geopavlakos/hamer.git
-cd hamer
+git clone https://github.com/yc4ny/SMPL-Fitting.git
+cd SMPL-Fitting
+```
+This code has been tested on *Python 3.7*, *Pytorch 1.7.1*, *CUDA 11.1*.
+We recommend creating a virtual environment for this repository. You can use conda:
+```
+conda create -n smplfitting python==3.7
 ```
 
-We recommend creating a virtual environment for HaMeR. You can use venv:
-```bash
-python3.10 -m venv .hamer
-source .hamer/bin/activate
-```
-
-or alternatively conda:
-```bash
-conda create --name hamer python=3.10
-conda activate hamer
-```
 
 Then, you can install the rest of the dependencies. This is for CUDA 11.7, but you can adapt accordingly:
 ```bash

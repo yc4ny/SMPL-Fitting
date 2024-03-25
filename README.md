@@ -10,18 +10,20 @@ First you need to clone the repo:
 git clone https://github.com/yc4ny/SMPL-Fitting.git
 cd SMPL-Fitting
 ```
-This code has been tested on *Python 3.7*, *Pytorch 1.7.1*, *CUDA 11.1*.
+This code has been tested on **Python 3.7**, **Pytorch 1.7.1**, **CUDA 11.0**.
 We recommend creating a virtual environment for this repository. You can use conda:
 ```
 conda create -n smplfitting python==3.7
 ```
 
+Then, you need to install Pytorch according to your CUDA version and GPU requriements. This is for CUDA 11.0, but you can adapt accordingly: 
+```
+pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+```
 
-Then, you can install the rest of the dependencies. This is for CUDA 11.7, but you can adapt accordingly:
-```bash
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu117
-pip install -e .[all]
-pip install -v -e third-party/ViTPose
+Then, you can install the rest of the dependencies with: 
+```
+pip install -r requriements.txt
 ```
 
 You also need to download the trained models:

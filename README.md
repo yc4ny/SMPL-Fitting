@@ -1,6 +1,6 @@
 # Fitting SMPL Parameters to 3D Keypoints
 
-![teaser](assets/teaser.jpg)
+![teaser](assets/teaser.png)
 
 ## Installation
 First you need to clone the repo:
@@ -24,7 +24,7 @@ Then, you can install the rest of the dependencies with:
 pip install -r requriements.txt
 ```
 
-## Prepare Preproecssing Files
+## Preprocessing Files
 
 
 ## Demo

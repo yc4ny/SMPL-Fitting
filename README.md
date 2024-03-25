@@ -28,7 +28,7 @@ pip install -r requriements.txt
 
 #### 1. Prepare **.npy** files containing the 3D Keypoint Data
 You must preprocess your data to match the input format. 
-The code will take a **.npy** file as input containing an array of shape $(N \times J \times 3)$, where $N$ is the number of frames in the sequence, $J$ the number of joints in the 3D Keypoint data. For example, if there is a $(500 \times 24 \times 3)$ array given as input, in the data there are $24 \times 3D$ Joints per frame and $500$ frames in total. 
+The code will take a **.npy** file as input containing an array of shape $(N \times J \times 3)$, where $N$ is the number of frames in the sequence, $J$ the number of joints in the 3D Keypoint data. For example, if there is a $(500 \times 24 \times 3)$ array given as input, in the data there are $24 \times 3D$ Joints per frame and $500$ frames in total. Put all the processed **.npy** files in a single folder, it will be used for the **--dataset_dir** flag in the demo. 
 
 ## Demo
 To perform fitting, you can run:

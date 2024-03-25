@@ -26,7 +26,7 @@ pip install -r requriements.txt
 
 ## Preprocessing Files
 You must preprocess the data to match the input format. 
-The code will take a **.npy** file as input containing an array of shape $(N \times J \times 3)$, where $N$ is the number of frames in the sequence, $J$ the number of joints in the 3D Keypoint data. For example, if there is a $(500x24x3)$ array given as input, there are 24 x 3D Joints per frame and 500 frames in total. 
+The code will take a **.npy** file as input containing an array of shape $(N \times J \times 3)$, where $N$ is the number of frames in the sequence, $J$ the number of joints in the 3D Keypoint data. For example, if there is a $(500 \times 24 \times 3)$ array given as input, there are 24 x 3D Joints per frame and 500 frames in total. 
 
 ## Demo
 To perform fitting, you can run:

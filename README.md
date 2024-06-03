@@ -41,7 +41,8 @@ python fit.py --dataset_name {name of the data} --dataset_dir {directory of the 
 ```
 
 ## Todo
-- [x] Add MANO for accurate hand fitting
+- [X] Add 3DPW Dataset Fitting
+- [] Add MANO for accurate hand fitting
 
 
 ## Acknowledgements

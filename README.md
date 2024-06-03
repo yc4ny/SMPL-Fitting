@@ -45,9 +45,6 @@ python fit.py --dataset_name {name of the data} --dataset_dir {directory of the 
 - [ ] Add MANO for accurate hand fitting
 
 ## Citation
-
-Depending on which model is loaded for your project, i.e. SMPL-X or SMPL+H or SMPL, please cite the most relevant work below, listed in the same order:
-
 ```
 @inproceedings{SMPL-X:2019,
     title = {Expressive Body Capture: 3D Hands, Face, and Body from a Single Image},

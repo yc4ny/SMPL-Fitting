@@ -40,6 +40,8 @@ To perform fitting, you can run:
 python fit.py --dataset_name {name of the data} --dataset_dir {directory of the preprocessed .npy files}
 ```
 
+## Todo
+- [x] Add MANO for accurate hand fitting
 
 
 ## Acknowledgements

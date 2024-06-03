@@ -44,6 +44,32 @@ python fit.py --dataset_name {name of the data} --dataset_dir {directory of the 
 - [X] Add 3DPW Dataset Fitting
 - [ ] Add MANO for accurate hand fitting
 
+## Citation
+
+Depending on which model is loaded for your project, i.e. SMPL-X or SMPL+H or SMPL, please cite the most relevant work below, listed in the same order:
+
+```
+@inproceedings{SMPL-X:2019,
+    title = {Expressive Body Capture: 3D Hands, Face, and Body from a Single Image},
+    author = {Pavlakos, Georgios and Choutas, Vasileios and Ghorbani, Nima and Bolkart, Timo and Osman, Ahmed A. A. and Tzionas, Dimitrios and Black, Michael J.},
+    booktitle = {Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
+    year = {2019}
+}
+```
+
+```
+@article{SMPL:2015,
+    author = {Loper, Matthew and Mahmood, Naureen and Romero, Javier and Pons-Moll, Gerard and Black, Michael J.},
+    title = {{SMPL}: A Skinned Multi-Person Linear Model},
+    journal = {ACM Transactions on Graphics, (Proc. SIGGRAPH Asia)},
+    month = oct,
+    number = {6},
+    pages = {248:1--248:16},
+    publisher = {ACM},
+    volume = {34},
+    year = {2015}
+}
+```
 
 ## Acknowledgements
 
